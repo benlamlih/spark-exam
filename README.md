@@ -21,13 +21,14 @@ Pour l'Exercice 2, j'ai supprimé les valeurs négatives des différences de `ru
 ## Aperçu
 
 ### Top 10 Channels with Most Trending Videos
-![Top 10 Channels](./1)
+![Top 10 Channels](./images/1.png)
+![Top 10 Channels 2](./images/2.png)
 
 ### Running Total Differences
-![Running Total Differences](./2)
+![Running Total Differences](./images/3.png)
 
 ### Salary Differences by Department
-![Salary Differences by Department](./3)
+![Salary Differences by Department](./images/4.png)
 
 ### Pivot Data
-![Pivot Data](./4)
+![Pivot Data](./images/5.png)
