@@ -13,7 +13,7 @@ st.title("PySpark Data Processing with Streamlit")
 
 # Exercice 1
 st.header("Exercice 1: Top 10 Channels with Most Trending Videos")
-file_path = "FRvideos.csv"
+file_path = "datasets/FRvideos.csv"
 df = spark.read.csv(file_path, header=True, inferSchema=True)
 
 df = df.na.drop()
@@ -49,7 +49,7 @@ st.dataframe(
 
 # Exercice 2
 st.header("Exercice 2: Running Total Differences")
-file_path = "ex2.csv"
+file_path = "datasets/ex2.csv"
 df = spark.read.csv(file_path, header=True, inferSchema=True)
 
 window_spec = Window.orderBy("time")
@@ -77,7 +77,7 @@ st.dataframe(df_result.toPandas())
 
 # Exercice 3
 st.header("Exercice 3: Salary Differences by Department")
-file_path = "ex3.csv"
+file_path = "datasets/ex3.csv"
 df = spark.read.csv(file_path, header=True, inferSchema=True)
 
 window_spec = Window.partitionBy("department")
@@ -91,7 +91,7 @@ st.dataframe(df_result.toPandas())
 
 # Exercice 4
 st.header("Exercice 4: Pivot Data")
-file_path = "ex4.csv"
+file_path = "datasets/ex4.csv"
 df = spark.read.csv(file_path, header=True, inferSchema=True)
 
 dates = df.select("date").distinct().collect()

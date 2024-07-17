@@ -8,7 +8,7 @@ spark = SparkSession.builder.appName("TrendingVideos").getOrCreate()
 
 # Exercice 1:
 
-file_path = "FRvideos.csv"
+file_path = "datasets/FRvideos.csv"
 df = spark.read.csv(file_path, header=True, inferSchema=True)
 
 df = df.na.drop()
@@ -44,7 +44,7 @@ sorted_df_combined.select("channel_title", "title", "like_dislike_ratio").show(
 
 # Exercice 2:
 
-file_path = "ex2.csv"
+file_path = "datasets/ex2.csv"
 df = spark.read.csv(file_path, header=True, inferSchema=True)
 
 print("Original DataFrame:")
@@ -75,7 +75,7 @@ df_result.show(truncate=False)
 
 # Exercice 3:
 
-file_path = "ex3.csv"
+file_path = "datasets/ex3.csv"
 df = spark.read.csv(file_path, header=True, inferSchema=True)
 
 print("Original DataFrame:")
@@ -92,7 +92,7 @@ df_result.show(truncate=False)
 
 # Exercice 4:
 
-file_path = "ex4.csv"
+file_path = "datasets/ex4.csv"
 df = spark.read.csv(file_path, header=True, inferSchema=True)
 
 print("Original DataFrame:")
